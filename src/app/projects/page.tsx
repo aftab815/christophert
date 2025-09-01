@@ -1,6 +1,5 @@
 "use client";
 import { useRef } from "react";
-import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -18,9 +17,6 @@ import Image3 from "@/assets/projects/image3.jpeg";
 import Image4 from "@/assets/projects/image4.jpeg";
 import Image5 from "@/assets/projects/image5.jpeg";
 import Image6 from "@/assets/projects/image6.jpeg";
-import Image7 from "@/assets/projects/image7.jpeg";
-import Image8 from "@/assets/projects/image8.jpeg";
-import Image9 from "@/assets/projects/image9.jpeg";
 import MobileBG from "@/../public/media/mobile projects bg.png";
 
 // types
@@ -33,10 +29,6 @@ interface ScrollInfo {
 
 export default function Projects() {
   const scrollContainerRef = useRef<HorizontalScrollContainerRef>(null);
-
-  const scrollToStart = () => {
-    scrollContainerRef.current?.resetScroll();
-  };
 
   const handleScrollChange = () => {
     // Scroll change handler for future use
@@ -119,7 +111,7 @@ export default function Projects() {
 
               <div className='bg-[#d5d5c8]/10 p-6 rounded-lg border border-[#d5d5c8]/20'>
                 <p className='text-[#d5d5c8] font-[300] text-base leading-relaxed italic'>
-&ldquo;Designed for connection—to nature, to art, and to each other—this home features open, flowing spaces that encourage gathering and contemplation in equal measure.&rdquo;
+                  &ldquo;Designed for connection—to nature, to art, and to each other—this home features open, flowing spaces that encourage gathering and contemplation in equal measure.&rdquo;
                 </p>
               </div>
 
@@ -128,7 +120,7 @@ export default function Projects() {
               </p>
 
               <p className='text-[#d5d5c8] font-[300] text-base leading-relaxed'>
-                Every line is drawn with intention. Local stone, minimal interventions, and breathable textures make the home feel like it's always belonged.
+                Every line is drawn with intention. Local stone, minimal interventions, and breathable textures make the home feel like it&apos;s always belonged.
               </p>
             </div>
           </div>
@@ -191,7 +183,7 @@ export default function Projects() {
             <div>
               <p className='text-[#d5d5c8] font-[300] text-base leading-relaxed text-center md:text-left'>
                 As an investment, The Quarry offers a fixed return of 14–20% annually, with capital protected via a
-                ring-fenced SPV and detailed development guarantees. Investors are not just backing a build — they're
+                ring-fenced SPV and detailed development guarantees. Investors are not just backing a build — they&apos;re
                 aligning with a new, grounded vision of sustainable living. This is a home that feels like a turning point — 
                 for design, for lifestyle, and for what comes next.
               </p>
@@ -203,7 +195,7 @@ export default function Projects() {
                 <div className='w-8 h-px bg-[#d5d5c8]/50 mt-2 mx-auto md:mx-0'></div>
               </Link>
               <p className='text-[#d5d5c8] font-[300] text-base leading-relaxed mt-2 text-center md:text-left'>
-                Interested in working together? We'd love to hear about your project.
+                Interested in working together? We&apos;d love to hear about your project.
               </p>
             </div>
           </div>
