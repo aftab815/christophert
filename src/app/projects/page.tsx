@@ -19,14 +19,6 @@ import Image5 from "@/assets/projects/image5.jpeg";
 import Image6 from "@/assets/projects/image6.jpeg";
 import MobileBG from "@/../public/media/mobile projects bg.png";
 
-// types
-interface ScrollInfo {
-  scrollPosition: number;
-  maxScroll: number;
-  scrollPercentage: number;
-  direction: "left" | "right";
-}
-
 export default function Projects() {
   const scrollContainerRef = useRef<HorizontalScrollContainerRef>(null);
 

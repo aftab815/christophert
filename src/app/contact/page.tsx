@@ -33,9 +33,20 @@ export default function Contact() {
     setSubmitState({ ok: null, message: null });
     
     try {
-      await sendContactEmail(formData);
-      setSubmitState({ ok: true, message: 'Message sent successfully!' });
-      setFormData({ name: "", email: "", message: "" });
+      const formDataObj = new FormData();
+      formDataObj.append('name', formData.name);
+      formDataObj.append('email', formData.email);
+      formDataObj.append('message', formData.message);
+      
+      const result = await sendContactEmail(undefined, formDataObj);
+      setSubmitState({ 
+        ok: result.ok, 
+        message: result.ok ? 'Message sent successfully!' : result.message || 'Failed to send message' 
+      });
+      
+      if (result.ok) {
+        setFormData({ name: "", email: "", message: "" });
+      }
     } catch (error) {
       setSubmitState({ 
         ok: false, 
